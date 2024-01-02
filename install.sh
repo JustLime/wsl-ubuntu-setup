@@ -9,14 +9,15 @@
 # TODO: Add asdf to used plugins for zsh
 
 # Install useful packages for Ubuntu, can avoid errors
-sudo apt install build-essential libssl-dev unzip zlib1g-dev libffi-dev libyaml-dev readline-common libedit-dev lzma
+sudo apt install build-essential libssl-dev unzip zlib1g-dev libffi-dev libyaml-dev readline-common libedit-dev 
+sudo apt install liblzma-dev tk-dev libsqlite3-dev libbz2-dev libreadline-dev
 
 # Add .bash_aliases
 touch ~/.bash_aliases
 
 # Install oh-my-zsh
 sudo apt install zsh -y
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Install neovim
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
