@@ -37,14 +37,13 @@ jobs:
       - name: Run "wsl --status"
         run: wsl --status
 
-      - name: Checkout dir
-      - uses: actions/checkout@v2
-
       - name: Run wsl
         run: wsl --distribution Ubuntu
 
       # Runs the script
       - name: Run a one-line script
         run: |
+          git clone https://github.com/JustLime/wsl-ubuntu-setup.git
+          cd wsl-ubuntu-setup
           chmod +x install.sh
           ./install.sh
