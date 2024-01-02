@@ -28,6 +28,8 @@ sudo mv nvim.appimage /usr/local/bin/nvim
 
 # Install asdf-vm
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.13.1
+sed -i -e 's/(git)/(git asdf)/g' ~/.zshrc
+source ~/.zshrc
 
 # Install all required asdf packages
 packages=("ruby" "python" "rust" "tmux" "bat" "nodejs" "golang")
