@@ -17,7 +17,9 @@ touch ~/.bash_aliases
 
 # Install oh-my-zsh
 sudo apt install zsh -y
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh --unattended)"
+chsh -s $(which zsh)
+zsh
 
 # Install neovim
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
